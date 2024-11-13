@@ -1,0 +1,78 @@
+
+<div class="main">
+    <div class="profile">
+        <div class="profile-pic">
+            <div class="cover-area">
+                <img src="../assets/coverImage.png" alt="">
+            </div>
+            <div class="profile-image">
+                <img src="../assets/clinton.jpg" alt="">
+            </div>
+            <h3>bill clinton</h3>
+            <p>full-Stack developer</p>
+            <div class="analytics">
+                <span><p>profile viewers</p><p>400</p></span>
+                <span><p>post impressions</p><p>500</p></span>
+            </div>
+        </div>
+        <div class="recent-area">
+            <div class="recent">
+                <h4>recent</h4>
+                <span><fa-icon [icon]="faUserFriends"></fa-icon><p>chuka university technology</p></span>
+                <span><fa-icon [icon]="faUserFriends"></fa-icon><p>internship group</p></span>
+                <span><fa-icon [icon]="faUserFriends"></fa-icon><p>software developer</p></span>
+                <span><fa-icon [icon]="faUserFriends"></fa-icon><p>machine learning and artificial intelligence</p></span>
+                <span><fa-icon [icon]="faUserFriends"></fa-icon><p>developers and software engineers</p></span>
+            </div>
+            <div class="events">
+                <span><h4>events</h4><fa-icon [icon]="faPlus"></fa-icon></span>
+                <span><fa-icon [icon]="faCalendar"></fa-icon><p>beyond the wireframes</p></span>
+                <span><fa-icon [icon]="faCalendar"></fa-icon><p>beyond the wireframes</p></span>
+            </div>
+        </div>
+    </div>
+    <div class="posts">
+        <div class="makePost">
+            <img src="../assets/clinton.jpg" alt="">
+            <input type="text" placeholder="Start a post">
+        </div>
+        <div class="post-area">
+            <div class="post" *ngFor="let post of posts">
+                <div class="photo">
+                    <img [src]="post.profile_pic" alt="">
+                    <div class="descri">
+                        <h4>{{post.author}}</h4>
+                        <p>{{post.profession}}</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>{{post.content}}</p>
+                    <img [src]="post.image" alt="">
+                </div>
+                <div class="reactions">
+                    <span><fa-icon [icon]="faThumbsUp"></fa-icon><p>{{post.like}}</p></span>
+                    <span><fa-icon [icon]="faComment"></fa-icon><p>{{post.comment}}</p></span>
+                    <span><fa-icon [icon]="faRetweet"></fa-icon><p>repost</p></span>
+                    <span><fa-icon [icon]="faPaperPlane"></fa-icon><p>send</p></span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="jobs-area">
+        <div class="jobs">
+            <div class="job" *ngFor="let job of jobs">
+                <img [src]="job.image" alt="">
+                <div class="descri">
+                    <h4>{{job.title}}</h4>
+                    <p>{{job.description}}</p>
+                    <button>
+                        <fa-icon [icon]="faPlus"></fa-icon>
+                        <p>follow</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

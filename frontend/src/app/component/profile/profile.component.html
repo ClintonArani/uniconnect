@@ -1,0 +1,184 @@
+<!-- <app-user-navbar/> -->
+<div class="main">
+    <div class="left">
+        <div class="profile-content">
+            <div class="profile-area">
+                <div class="coverImage">
+                    <img src="../assets/coverImage.png" alt="">
+                </div>
+                <div class="profileImage">
+                    <img src="../assets/clinton.jpg" alt="">
+                </div>
+            </div>
+            <div class="enhace-profile">
+                <div class="enhance-left">
+                    <h3>Bill Clinton</h3>
+                    <p>full-stack developer</p>
+                    <div class="location"> 
+                        <p>nairobi county</p>
+                        <p>contact info</p>
+                    </div>
+                </div>
+                <div class="enhance-right">
+                </div>
+            </div>
+            <p class="connections">500+ Connections</p>
+            <div class="buttons">
+                <button class="open-btn">open to</button>
+                <button class="add-section-btn">Add profile section</button>
+                <button class="enhance-btn">enhance profile</button>
+                <button class="resources">resources</button>
+            </div>
+        </div>
+        <!-- ANALYTICS WITH THE PROFILE -->
+        <div class="analytics">
+            <h1>analytics</h1>
+            <span><fa-icon [icon]="faEye"></fa-icon><p>private to you</p></span>
+            <div class="card-section">
+                <div class="card" *ngFor="let analytic of analytics">
+                    <fa-icon [icon]="analytic.icon"></fa-icon>
+                    <div class="text">
+                        <p>{{analytic.para1}}</p>
+                        <p>{{analytic.para2}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- services -->
+        <div class="services">
+            <div class="topper">
+                <h2>Services</h2>
+                <fa-icon [icon]="faPencilAlt"></fa-icon>
+            </div>
+            <div class="someservices">
+                <p>web design. visual design. leadership development. web development. mobile application development. custom software development. application development .blogging</p>
+            </div>
+            <span><p>show all services</p> <fa-icon [icon]="faArrowRight"></fa-icon></span>
+        </div>
+        <!-- activivities -->
+        <div class="activities">
+            <div class="topper">
+                <div class="title">
+                    <h2>activities</h2>
+                    <p>20K followers</p>
+                </div>
+                <div class="crud">
+                    <button>create a post</button>
+                    <fa-icon [icon]="faPencilAlt"></fa-icon>
+                </div>
+            </div>
+            <div class="navigation-btn">
+                <button>posts</button>
+                <button>comments</button>
+                <button>videos</button>
+                <button>images</button>
+            </div>
+            <div class="posts">
+                <div class="post" *ngFor="let post of posts">
+                    <span><p>bill clinton</p> <p>posted this</p></span>
+                    <div class="post-content">
+                        <img [src]="post.image" alt="">
+                        <p [innerHTML]="post.text"></p>
+                    </div>
+                    <div class="reaction">
+                        <div class="like">
+                            <fa-icon [icon]="faHeart"></fa-icon>
+                            <p>{{post.like}}</p>
+                        </div>
+                        <div class="comment">
+                            <p>{{post.comments}}</p>
+                            <fa-icon [icon]="faComment"></fa-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- education -->
+        <div class="education">
+            <div class="topper">
+                <h1>education</h1>
+                <div class="icons">
+                    <fa-icon [icon]="faPlus"></fa-icon>
+                    <fa-icon [icon]="faPencilAlt"></fa-icon>
+                </div>
+            </div>
+            <div class="classify-educa">
+                <img src="../assets/chuka.png" alt="">
+                <div class="text">
+                    <p>bsc in applied computer science</p>
+                    <p>sep 2021 - oct 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="profile-setting">
+            <div class="language">
+                <div class="type">
+                    <h2>profile language</h2>
+                    <p>english</p>
+                </div>
+                <fa-icon [icon]="faPencilAlt"></fa-icon>
+            </div>
+            <div class="url-link">
+                <div class="url">
+                    <h2>public profile & URL</h2>
+                    <small>www.linkedin.com/in/bill-clinton-1597ab27a</small>
+                </div>
+                <fa-icon [icon]="faPencilAlt"></fa-icon>
+            </div>
+        </div>
+        <!-- internship -->
+        <div class="intern">
+            <img src="../assets/intern.png" alt="">
+        </div>
+        <!-- connection -->
+        <div class="connect">
+            <div class="conections">
+                <h2>people you may know</h2>
+                <p>from your industry</p>
+                <div class="connection" *ngFor="let connection of connections">
+                    <img [src]="connection.image" alt="">
+                    <div class="details">
+                        <h3>{{connection.name}}</h3>
+                        <p>{{connection.profession}}</p>
+                        <button>
+                            <fa-icon [icon]="faUserPlus"></fa-icon>
+                            <p>connect</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- follows -->
+        <div class="follow-pages">
+            <div class="follow">
+                <h2>pages you might like</h2>
+                <p>pages for you</p>
+                <div class="follows" *ngFor="let follow of follows">
+                    <img [src]='follow.companyPic' alt="">
+                    <div class="details">
+                        <h3>{{follow.title}}</h3>
+                        <h4>{{follow.profession}}</h4>
+                        <small>{{follow.followers}}</small>
+                        <div class="images">
+                            <div class="image">
+                                <img [src]="follow.pic1" alt="">
+                                <img [src]="follow.pic2" alt="">
+                                <img [src]="follow.pic3" alt="">
+                            </div>
+                            <div class="comment">
+                                <p>667 connections</p>
+                                <p>follow this page</p>
+                            </div>
+                        </div>
+                        <button>
+                            <fa-icon [icon]="faPlus"></fa-icon>
+                            <p>follow</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

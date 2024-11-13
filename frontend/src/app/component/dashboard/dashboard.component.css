@@ -1,0 +1,325 @@
+.main{
+    background: #f4f2ee;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: -1.2rem;
+    padding: 1.2rem;
+}
+/* profile area */
+.profile{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.profile > .profile-pic{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 0 8px #ccc;
+}
+.profile > .profile-pic > .cover-area{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 8rem;
+}
+.profile > .profile-pic > .cover-area > img{
+    width: 100%;
+    height: 8rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.profile > .profile-pic > .profile-image{
+    z-index: 9000;
+    width: 7rem;
+    height: 6rem;
+    margin: -2.5rem auto;
+    border-radius: 50%;
+}
+.profile > .profile-pic > .profile-image > img{
+    width: 7rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+.profile > .profile-pic > h3{
+    margin-left: 1.2em;
+    margin-top: 3.5rem;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.profile > .profile-pic > p{
+    margin-left: 1.4em;
+    margin-top: -0.5rem;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.profile > .profile-pic > .analytics{
+    margin-left: 1.4em;
+    margin-right: 1.4em;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.profile > .profile-pic > .analytics > span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.profile > .profile-pic > .analytics > span > p:last-child{
+    color: #169bea;
+    font-weight: bold;
+}
+.profile > .profile-pic > .analytics > span:last-child{
+    margin-top: -1.5rem;
+}
+.profile > .recent-area{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 0 8px #ccc;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+.profile > .recent-area >.recent{
+    display: flex;
+    flex-direction: column;
+}
+.profile > .recent-area >.recent > h4{
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    color: green;
+}
+.profile > .recent-area >.recent > span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.9rem;
+}
+.profile > .recent-area >.recent > span > fa-icon{
+    font-size: 1.5rem;
+    color: #000;
+}
+.profile > .recent-area >.recent > span > p{
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+.profile > .recent-area > .events{
+    display: flex;
+    flex-direction: column;
+}
+.profile > .recent-area > .events > span:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile > .recent-area > .events > span:nth-child(1)>h4{
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: green;
+}
+.profile > .recent-area > .events > span:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.9rem;
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+.profile > .recent-area > .events > span:nth-child(3){
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.9rem;
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+/* posts area */
+.posts{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.posts > .makePost{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 0 8px #ccc;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.posts > .makePost > img{
+    width: 5rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+.posts > .makePost > input[type="text"]{
+    width: 80%;
+    height: 2rem;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    border: 1px solid #aaa;
+    outline: none;
+    color: #000;
+}
+.posts > .makePost > input[type="text"]::placeholder{
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+}
+.posts > .post-area{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+.posts > .post-area > .post{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 0 8px #ccc;
+    padding: 1.5em;
+}
+.posts > .post-area > .post > .photo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.posts > .post-area > .post > .photo > img{
+    width: 5rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+.posts > .post-area > .post > .photo > .descri{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.posts > .post-area > .post > .photo > .descri > h4{
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: #169bea;
+}
+.posts > .post-area > .post > .photo > .descri > p{
+    margin-top: -1rem;
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+.posts > .post-area > .post > .content{
+    display: flex;
+    flex-direction: column;
+}
+.posts > .post-area > .post > .content > p{
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 18px;
+}
+.posts > .post-area > .post > .content >img{
+    height: 15rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.posts > .post-area > .post > .reactions{
+    display: flex;
+    margin-top: 0.5rem;
+    gap: 8rem;
+}
+.posts > .post-area > .post > .reactions > span{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.posts > .post-area > .post > .reactions > span:nth-child(1) > fa-icon{
+    color: blue;
+}
+.posts > .post-area > .post > .reactions > span:nth-child(2) > fa-icon{
+    color: violet;
+}
+.posts > .post-area > .post > .reactions > span:nth-child(3) > fa-icon{
+    color: indigo;
+}
+.posts > .post-area > .post > .reactions > span:nth-child(3) > p{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+.posts > .post-area > .post > .reactions > span:nth-child(4) > p{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+.posts > .post-area > .post > .reactions > span:nth-child(4) > fa-icon{
+    color: rgb(112, 178, 13);
+}
+/* job vacancies area */
+.jobs-area{
+    flex: 1;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.jobs-area > .jobs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+.jobs-area > .jobs > .job{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 0 8px #ccc;
+    padding: 1.5em;
+}
+.jobs-area > .jobs > .job > img{
+    width: 6rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.jobs-area > .jobs > .job > .descri{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.jobs-area > .jobs > .job > .descri > h4{
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+}
+.jobs-area > .jobs > .job > .descri > p{
+    margin-top: -1rem;
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+.jobs-area > .jobs > .job > .descri > button{
+    border: 2px solid #aaa;
+    background: transparent;
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    gap: 0.9rem;
+    font-size: large;
+    color: #252525;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: all ease-in-out .5s;
+}
+.jobs-area > .jobs > .job > .descri > button:hover{
+    border: 2px solid #252525;
+    background-color: antiquewhite;
+}

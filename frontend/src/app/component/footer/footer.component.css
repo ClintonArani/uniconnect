@@ -1,0 +1,142 @@
+.main{
+    background-color: #181d38;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    max-width: fit-content;
+}
+.main > .cards{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+.main > .cards > .card1 >h2{
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+
+.main > .cards > .card1 > ul > li{
+    text-transform: capitalize;
+    line-height: 2;
+    list-style: square;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+.main > .cards > .card2 > h2{
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+.main > .cards > .card2 > span{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-transform: capitalize;
+    margin-top: -0.5rem;
+    color: aliceblue;
+}
+.main > .cards > .card2 > span > a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+.main > .cards > .card2 > .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    color: aliceblue;
+}
+.main > .cards > .card2 > .icons > fa-icon{
+    border: 1px solid aliceblue;
+    padding: 5px;
+    border-radius: 50%;
+}
+.main > .cards > .card2 > .icons > fa-icon:hover{
+    background-color: #00d377;
+    color: #000;
+}
+.main > .cards > .card3 > h2{
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: aliceblue;
+}
+.main > .cards > .card3 > .images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.main > .cards > .card3 > .images > img{
+    width: 5rem;
+    height: 4rem;
+}
+.main > .cards > .card4 >h2{
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: aliceblue;
+}
+.main > .cards > .card4 > p{
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: aliceblue;
+}
+.main > .cards > .card4 > .input{
+    background-color: aliceblue;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    padding-left: 3.5rem;
+    border-radius: 15px;
+}
+.main > .cards > .card4 > .input > input[type="text"]{
+    background-color: transparent;
+    border: none;
+    margin-left: -3rem;
+    width: 12rem;
+}
+.main > .cards > .card4 > .input > input[type="text"]:focus{
+    outline: none;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+::placeholder{
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.main > .cards > .card4 > .input > button{
+    width: 8rem;
+    height: 2.5rem;
+    margin-right: -11px;
+    background-color: #00d377;
+    border: none;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: aliceblue;
+}
+.main > .copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 2px #aaa;
+}
+.main > .copyright > p{
+    margin-top: 2rem;
+    color: aliceblue;
+    font-size: large;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    text-transform: capitalize;
+}
+.main > .copyright > p > fa-icon{
+    color: #00d377;
+    margin-right: 10px;
+}

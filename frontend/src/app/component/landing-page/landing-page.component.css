@@ -1,0 +1,589 @@
+.main {
+    background-color: #fff;
+    min-height: 100vh; /* Fill viewport height */
+    width: 100%;
+}
+
+.main > .section-1 {
+    background-image: url('../../../../public/assets/carousel-2.jpg'); /* Adjust path as necessary */
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 88vh;
+    margin-top: -17px;
+    padding-top: 8rem;
+}
+
+.main > .section-1 > .text {
+    margin-left: 6rem;
+}
+.main > .section-1 > .text > h3{
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    color: #00d377;
+    letter-spacing: 3px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.main > .section-1 > .text > h1{
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    color: aliceblue;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.main > .section-1 > .text > p{
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    color: aliceblue;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+}
+
+.main > .section-1 > .text > .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5rem;
+    gap: .5rem;
+}
+.main > .section-1 > .text > .buttons > button{
+    height: 2.5rem;
+    width: 11rem;
+    border: none;
+    font-size: large;
+    text-transform: capitalize;
+    background-color: #00d377;
+    border-radius: 2.5rem;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: Verdana, Geneva, sans-serif;
+    transition: all ease-in-out 0.5s;
+}
+.main > .section-1 > .text > .buttons > button:hover{
+    background: transparent;
+    border: solid 2px #0b0ba7;
+    color: rgb(11, 11, 167);
+    box-shadow: 2px 0 24px aliceblue;
+}
+
+/* CHATBOT SECTION */
+.chatbot {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.chatbot > img {
+    margin-top: 8rem;
+    width: 7rem;
+    height: 5rem;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1;
+}
+
+/* Chatbot Pop-up Styling */
+.chatbot > .chatbot-popup {
+    position: fixed;
+    bottom: 10rem;
+    right: 1rem;
+    width: 350px;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0.9;
+    margin-bottom: -5rem;
+}
+
+.chatbot > .chatbot-popup > .chatbot-header {
+    background-color: #00d377;
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Verdana, Geneva, sans-serif;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot > .chatbot-popup > .chatbot-header > h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.chatbot > .chatbot-popup > .chatbot-header > .close-btn {
+    background: transparent;
+    border: none;
+    font-size: x-large;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chatbot > .chatbot-popup > .chatbot-body {
+    height: 25rem;
+    padding: 1rem;
+}
+
+.chatbot > .chatbot-popup > .chatbot-body > .chat-entry{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.chatbot > .chatbot-popup > .chatbot-body > .chat-entry > .user-question{
+    margin-top: 10px;
+    color: #050578;
+}
+.chatbot > .chatbot-popup > .chatbot-body > .chat-entry > .bot-answer{
+    color: #252525;
+}
+ .chatbot > .chatbot-popup > .chatbot-body.chatbot-body >  p {
+    margin: 0;
+    color: rgb(255, 98, 0);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.chatbot > .chatbot-popup > .chat-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17rem;
+    position: sticky;
+    bottom: 0;
+}
+.chatbot > .chatbot-popup > .chat-input > textarea {
+    width: 70%;
+    resize: none;
+    min-height: fit-content;
+    padding-left: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.chatbot > .chatbot-popup > .chat-input > textarea:focus + .send-btn {
+    color: #00d377;
+}
+
+.chatbot > .chatbot-popup > .chat-input > .send-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+    font-family: Verdana, Geneva, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* SECTION TWO STARTS HERE */
+.section-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.section-2 > .card{
+    background-color: #f0fbfc;
+    width: 18rem;
+    min-height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 15px;
+    transition: all ease-in-out 0.5s; 
+}
+.section-2 > .card:hover{
+    background-color: #06bbcc;
+    transform: translateY(-10px);
+}
+.section-2 > .card:hover fa-icon{
+    color: #fff;
+}
+.section-2 > .card:hover h2{
+    color: #fff;
+}
+.section-2 > .card:hover p{
+    color: #fff;
+}
+.section-2 > .card > fa-icon{
+    display: block;
+    margin: 0 auto;
+    font-size: xx-large;
+    color: #2bc5d4;
+}
+.section-2 > .card > h2{
+    display: block;
+    margin: 0 auto;
+    text-transform: capitalize;
+    margin-top: .5rem;
+}
+.section-2 > .card > p{
+    display: block;
+    margin: 0 auto;
+    margin-left: 1.5rem;
+    margin-top: .5rem;
+    font-size: large;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+/* SECTION THREE STARTS HERE */
+.section-3 {
+    display: flex;
+    align-items: flex-start;   
+    justify-content: center;    
+    gap: 20px;                  
+    max-width: 1250px;          
+    margin: 0 auto;           
+}
+
+.section-3 > .image{
+    flex: 1;             
+    box-sizing: border-box;
+}
+.section-3 > .image >img{
+    width: 38rem;
+    height: 29rem;
+}
+.section-3 > .about {
+    flex: 1;                    
+    padding: 10px;              
+    box-sizing: border-box; 
+}
+.section-3 > .about > h3{
+    color: #2bc5d4;
+    font-size: large;
+    font-family: Verdana, Geneva, sans-serif;
+    text-transform: uppercase;
+}
+.section-3 > .about > h1{
+    font-family: Verdana, Geneva, sans-serif;
+    text-transform: capitalize;
+}
+.section-3 > .about > p{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: large;
+}
+.section-3 > .about > .todo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+}
+.section-3 > .about > .todo>:nth-child(3),:nth-child(4),:nth-child(5),:nth-child(6){
+    margin-top: -20px;
+}
+.section-3 > .about > .todo > span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: capitalize;
+}
+.section-3 > .about > .todo > span > fa-icon{
+    color: #06bbcc;
+}
+.section-3 > .about > button{
+    width: 12rem;
+    height: 2.5rem;
+    margin-top: 0.9rem;
+    cursor: pointer;
+    color: #fff;
+    background: #06bbcc;
+    text-transform: capitalize;
+    font-size: large;
+    font-family: Verdana, Geneva, sans-serif;
+    border: none;
+    border-radius: 2.5rem;
+    transition: all ease-in-out; 
+}
+.section-3 > .about > button:hover{
+    border: solid 2px #06bbcc;
+    background-color: aliceblue;
+    color: #000;
+}
+
+/* SECTION FOUR STARTS HERE */
+.section-4{
+    margin: 3rem;
+
+}
+.section-4 > h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.section-4 > .course-container{
+    max-width: 1250px;
+    min-height: max-content;
+    display: flex;
+    gap: 10px;
+}
+.section-4 > .course-container > .left{
+    flex: 2;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+        'a a'
+        'b c';
+}
+.section-4 > .course-container > .left > .card1{
+    grid-area: a;
+}
+.section-4 > .course-container > .left > .card2{
+    grid-area: b;
+}
+.section-4 > .course-container > .left > .card3{
+    grid-area: c;
+}
+.section-4 > .course-container > .card4{
+    flex: 1;
+}
+.card1 > .course-info {
+    position: absolute;
+    left: 10px;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -4rem;
+    margin-left: 44.4rem;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 4px #252525;
+
+}
+.card2 > .course-info {
+    position: absolute;
+    left: 10px;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -4rem;
+    margin-left: 18.5rem;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 4px #252525;
+
+}
+.card3 > .course-info {
+    position: absolute;
+    left: 10px;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -4rem;
+    margin-left: 44.4rem;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 4px #252525;
+
+}
+.card4 > .course-info {
+    position: absolute;
+    left: 10px;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -4rem;
+    margin-left: 68.4rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 4px #252525;
+
+}
+.card > img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    display: block;
+}
+.card4 > img{
+    width: 100%;
+    height: 24.6rem;
+    object-fit: cover;
+    display: block;
+}
+.course-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.course-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #06bbcc;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+/* SECTION FIVE STARTS HERE */
+.section-5{
+    margin: 4rem;
+}
+.section-5 > h1{
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    margin-bottom: 2rem;
+}
+.section-5 > .boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.section-5 > .boxes > .box{
+    box-shadow: 2px 0 4px #252525;
+    width: 23rem;
+    min-height: max-content;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+.section-5 > .boxes > .box > img{
+    width: 23rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.section-5 > .boxes > .box > .text > .rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.section-5 > .boxes > .box > .text > .rating > .icons{
+    color: #06bbcc;
+}
+.section-5 > .boxes > .box > .text > .rating > .icons > fa-icon{
+    margin-left: .5rem;
+}
+.section-5 > .boxes > .box > .text > h2{
+    text-align: center;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+/* SECTION SIX STARTS HERE */
+.section-6{
+    margin: 3rem;
+}
+.section-6 > h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.section-6 > .experts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.section-6 > .experts .expert:nth-child(4){
+    margin-top: .1rem;
+}
+.section-6 > .experts > .expert{
+    width: 18rem;
+    box-shadow: 2px 0 4px #252525;
+    border-radius: 15px;
+    padding-bottom: 1rem;
+}
+.section-6 > .experts > .expert > img{
+    width: 18rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px
+}
+.section-6 > .experts > .expert > .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: -1rem;
+}
+.section-6 > .experts > .expert > .icon > fa-icon{
+    background: #13bfcf;
+    border-radius: 50%;
+    padding: 8px;
+}
+.section-6 > .experts > .expert > .icon > fa-icon:hover{
+    color: #fff;
+    background: #00d377;
+}
+.section-6 > .experts > .expert > h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.section-6 > .experts > .expert > small{
+    margin-left: 6rem;
+    margin-top: -1rem;
+}
+/* SECTION SEVEN STARTS HERE */
+.section-7{
+    margin: 3rem;
+}
+.section-7 > h3{
+    text-transform: uppercase;
+    color: #06bbcc;
+    font-family: Verdana, Geneva, sans-serif;
+    text-align: center;
+}
+.section-7 > h1{
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.section-7 > .profiles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.section-7 > .profiles > .profile > .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.section-7 > .profiles > .profile > .info > img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: solid 2px #00d377;
+
+}
+.section-7 > .profiles > .profile > .quote{
+    display: flex;
+    justify-content: center;
+}

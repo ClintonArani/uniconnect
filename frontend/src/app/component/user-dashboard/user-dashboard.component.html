@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="main">
+        <div class="logo">
+            <img src="../assets/icon.png" alt="">
+            <div class="input">
+                <fa-icon [icon]="faSearch"></fa-icon>
+                <input type="text" placeholder="Search.....">
+            </div>
+        </div>
+        <ul routerLink="/uniconnect.com/feed">
+            <li>
+                <fa-icon [icon]="faHome"></fa-icon>
+                <p >home</p>
+            </li>
+            <li routerLink="/uniconnect.com/network">
+                <div class="icon">
+                    <fa-icon [icon]="faUsers"></fa-icon>
+                    <p class="notify">12</p>
+                </div>
+                <p>my network</p>
+            </li>
+            <li>
+                <fa-icon [icon]="faBriefcase"></fa-icon>
+                <p>jobs</p>
+            </li>
+            <li>
+                <div class="icon"> 
+                    <fa-icon [icon]="faCommentDots"></fa-icon>
+                    <p class="notify">10</p>
+                </div>
+                <p>messaging</p>
+            </li>
+            <li>
+                <div class="icon">
+                    <fa-icon [icon]="faBell"></fa-icon>
+                    <p class="notify">20</p>
+                </div>
+                <p>notification</p>
+            </li>
+        </ul>
+        <!-- Profile Section with Dropdown -->
+        <div class="profile" (click)="toggleDropdown($event)">
+            <img src="../assets/clinton.jpg" alt="">
+            <span>
+                <p>me</p>
+                <fa-icon [icon]="faCaretDown"></fa-icon>
+            </span>
+    
+            <!-- Dropdown Menu -->
+            <div *ngIf="isDropdownVisible" class="dropdown-menu">
+                <div class="profile-area">
+                    <img src="../assets/clinton.jpg" alt="">
+                    <div class="descri">
+                        <h3>Clinton Omari</h3>
+                        <p>Full-stack Developer</p>
+                    </div>
+                </div>
+                <button routerLink="/uniconnect.com/profile" class="view-btn" ng-click=""(click)="viewProfile()">View Profile</button>
+                <button class="settings">Settings & privacy</button>
+                <button class="language">language</button>
+                <h3>Manage</h3>
+                <button>job posting account</button>
+                <button class="posts">posts & activity</button>
+                <button>attachment listing</button>
+                <button routerLink="/login">Logout</button>
+    
+                <!-- Add other menu items as needed -->
+            </div>
+        </div>
+        
+        <div class="other-navs">
+            <li>
+                <fa-icon [icon]="faTh"></fa-icon>
+                <p>for business</p>
+            </li>
+            <li>
+                <div class="custom-square-icon"></div>
+                <p>premium</p>
+            </li>
+        </div>
+    </div>
+    <div class="display-area">
+        <router-outlet/>
+    </div>
+</div>
+

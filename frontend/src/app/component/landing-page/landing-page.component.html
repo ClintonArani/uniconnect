@@ -1,0 +1,252 @@
+<app-navbar></app-navbar>
+
+<div class="main">
+    <!-- SECTION ONE STARTS HERE -->
+    <div class="section-1">
+        <div class="text"> 
+            <h3>Best Online Courses</h3>
+            <h1>Get educated online by connecting<br> with other learned students globally</h1>
+            <p>Join a thriving network where students from universities worldwide come together to collaborate, learn, and grow.</p>
+            <div class="buttons">
+                <button>Explore More</button>
+                <button>Join Us</button>
+            </div>
+        </div>
+
+        <div class="chatbot">
+            <img src="../assets/chatbot.png" alt="Chatbot" (click)="toggleChatbot()">
+            <!-- Chatbot Pop-up Div -->
+            <div class="chatbot-popup" *ngIf="isChatbotOpen">
+                <div class="chatbot-header">
+                    <h2>Chat with Us!</h2>
+                    <button class="close-btn" (click)="toggleChatbot()">X</button>
+                </div>
+
+                <div class="chatbot-body">
+                    <p>Hello! How can I assist you today?</p>
+                    <!-- Display chat history -->
+                    <div *ngFor="let entry of chatHistory" class="chat-entry">
+                        <div class="user-question">{{ entry.question }}</div>
+                        <div class="bot-answer">{{ entry.answer }}</div>
+                    </div>
+                </div>
+
+                <!-- Input area for user interactions -->
+                <div class="chat-input">
+                    <textarea [(ngModel)]="userMessage" placeholder="Type your message here..."></textarea>
+                    <fa-icon [icon]="faPaperPlain" class="send-btn" (click)="sendMessage()"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION TWO STARTS HERE -->
+    <div class="section-2">
+        <div class="card" *ngFor="let card of cards">
+            <fa-icon [icon]="card.icon"></fa-icon>
+            <h2>{{card.title}}</h2>
+            <p>{{card.text}}</p>
+        </div>
+    </div>
+    <!-- ABOUT SECTION STARTS HERE -->
+    <div class="section-3">
+        <div class="image">
+            <img src="../assets/about.jpg" alt="about image">
+        </div>
+        <div class="about">
+            <h3>about us</h3>
+            <h1>welcome to uniConnect</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quia pariatur sed aliquid molestiae facere eius expedita ad libero voluptatibus.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, neque voluptates facere hic recusandae iure esse delectus adipisci velit rem obcaecati voluptas numquam reprehenderit dolore ea odio, molestias nisi ut!</p>
+            <div class="todo">
+                <span><fa-icon [icon]="faArrowRight"></fa-icon><p>skilled instructors</p></span>
+                <span><fa-icon [icon]="faArrowRight"></fa-icon><p>international certificate</p></span>
+                <span><fa-icon [icon]="faArrowRight"></fa-icon><p>online classes</p></span>
+                <span><fa-icon [icon]="faArrowRight"></fa-icon><p>online classes</p></span>
+                <span><fa-icon [icon]="faArrowRight"></fa-icon><p>skilled instructors</p></span>
+                <span><fa-icon [icon]="faArrowRight"></fa-icon><p>international certificate</p></span>
+            </div>
+            <button>explore more</button>
+        </div>
+    </div>
+    <!-- SECTION FOUR STARTS HERE -->
+    <div class="section-4">
+        <h1>courses categories</h1>
+        <div class="course-container">
+            <div class="left">
+                <div class="card card1">
+                    <img src="../assets/cat-1.jpg" alt="Web Design">
+                    <div class="course-info">
+                        <h3>Web Design</h3>
+                        <p>49 Courses</p>
+                    </div>
+                </div>
+                <div class="card card2">	
+                    <img src="../assets/cat-2.jpg" alt="Graphic Design">
+                    <div class="course-info">
+                        <h3>Graphic Design</h3>
+                        <p>49 Courses</p>
+                    </div>
+                </div>
+                <div class="card card3">
+                    <img src="../assets/cat-3.jpg" alt="Video Editing">
+                    <div class="course-info">
+                        <h3>Video Editing</h3>
+                        <p>49 Courses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card card4">
+                <img src="../assets/cat-4.jpg" alt="Online Marketing">
+                <div class="course-info">
+                    <h3>Online Marketing</h3>
+                    <p>49 Courses</p>
+                </div>
+            </div>
+        </div>                
+    </div>
+    <!-- SECTION FIVE START HERE -->
+    <div class="section-5">
+        <h1>popular courses</h1>
+        <div class="boxes">
+            <div class="box">
+                <img src="../assets/course-1.jpg" alt="">
+                <div class="text">
+                    <p></p>
+                    <div class="rating">
+                        <div class="icons">
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                        </div>
+                        <p>(123)</p>
+                    </div>
+                    <h2>web design & development <br> course for beginners</h2>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../assets/course-2.jpg" alt="">
+                <div class="text">
+                    <p></p>
+                    <div class="rating">
+                        <div class="icons">
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                        </div>
+                        <p>(123)</p>
+                    </div>
+                    <h2>web design & development <br> course for beginners</h2>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../assets/course-3.jpg" alt="">
+                <div class="text">
+                    <p></p>
+                    <div class="rating">
+                        <div class="icons">
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                        </div>
+                        <p>(123)</p>
+                    </div>
+                    <h2>web design & development <br> course for beginners</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION SIX STARTS HERE -->
+    <div class="section-6">
+        <h1>expert instructors</h1>
+        <div class="experts">
+            <div class="expert">
+                <img src="../assets/team-1.jpg" alt="">
+                <div class="icon">
+                    <fa-icon [icon]="faFacebook"></fa-icon>
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                    <fa-icon [icon]="faInstagram"></fa-icon>
+                </div>
+                <h2>instructor name</h2>
+                <small>destignation</small>
+            </div>
+            <div class="expert">
+                <img src="../assets/team-2.jpg" alt="">
+                <div class="icon">
+                    <fa-icon [icon]="faFacebook"></fa-icon>
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                    <fa-icon [icon]="faInstagram"></fa-icon>
+                </div>
+                <h2>instructor name</h2>
+                <small>destignation</small>
+            </div>
+            <div class="expert">
+                <img src="../assets/team-3.jpg" alt="">
+                <div class="icon">
+                    <fa-icon [icon]="faFacebook"></fa-icon>
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                    <fa-icon [icon]="faInstagram"></fa-icon>
+                </div>
+                <h2>instructor name</h2>
+                <small>destignation</small>
+            </div>
+            <div class="expert">
+                <img src="../assets/team-4.jpg" alt="">
+                <div class="icon">
+                    <fa-icon [icon]="faFacebook"></fa-icon>
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                    <fa-icon [icon]="faInstagram"></fa-icon>
+                </div>
+                <h2>instructor name</h2>
+                <small>destignation</small>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION SEVEN STARTS HERE -->
+    <div class="section-7">
+        <h3>testimonial</h3>
+        <h1>our student say!</h1>
+        <div class="profiles">
+            <div class="profile">
+                <div class="info">
+                    <img src="../assets/testimonial-1.jpg" alt="">
+                    <h2>client name</h2>
+                    <small>professioon</small>
+                </div>
+                <div class="quote">
+                    <fa-icon [icon]="faQuoteLeft"></fa-icon>
+                    <p>This program has completely transformed my understanding of coding. The instructors were incredibly supportive, and the hands-on projects made everything click. I feel more prepared than ever for a career in tech!</p>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <img src="../assets/testimonial-2.jpg" alt="">
+                    <h2>client name</h2>
+                    <small>professioon</small>
+                </div>
+                <div class="quote">
+                    <fa-icon [icon]="faQuoteLeft"></fa-icon>
+                    <p>Learning here was an amazing experience! The curriculum was challenging but rewarding, and the practical knowledge I gained has already helped me land my first internship. Highly recommend to anyone serious about tech.</p>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <img src="../assets/testimonial-3.jpg" alt="">
+                    <h2>client name</h2>
+                    <small>professioon</small>
+                </div>
+                <div class="quote">
+                    <fa-icon [icon]="faQuoteLeft"></fa-icon>
+                    <p>The interactive classes and real-world projects made learning so much easier and enjoyable. I loved how the instructors made complex topics understandable. This program gave me the confidence to pursue my dreams in software development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
