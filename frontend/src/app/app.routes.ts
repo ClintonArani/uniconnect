@@ -21,7 +21,7 @@ export const routes: Routes = [
         children: [
             {path: 'feed',component:DashboardComponent},
             {path: '',redirectTo: 'feed',pathMatch: 'full'},
-            {path: 'network',component:MynetworkComponent},
+            {path: 'mynetwork',component:MynetworkComponent},
             {path: 'profile',component: ProfileComponent},
         ]
     },

@@ -51,6 +51,9 @@ export class UserDashboardComponent implements OnInit, OnDestroy {
   }
 
   showMynetwork(){
-    
+    this.router.navigate(["mynetwork"],{relativeTo: this.route})
+  }
+  showFeed(){
+    this.router.navigate(["feed"],{relativeTo: this.route})
   }
 }

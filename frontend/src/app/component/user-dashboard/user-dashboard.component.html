@@ -7,12 +7,12 @@
                 <input type="text" placeholder="Search.....">
             </div>
         </div>
-        <ul routerLink="/uniconnect.com/feed">
-            <li>
+        <ul>
+            <li (click)="showFeed()">
                 <fa-icon [icon]="faHome"></fa-icon>
                 <p >home</p>
             </li>
-            <li routerLink="/uniconnect.com/network">
+            <li (click)="showMynetwork()">
                 <div class="icon">
                     <fa-icon [icon]="faUsers"></fa-icon>
                     <p class="notify">12</p>
