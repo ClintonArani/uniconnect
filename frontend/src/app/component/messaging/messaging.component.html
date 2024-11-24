@@ -1,0 +1,41 @@
+<div class="main">
+    <div class="messagebox">
+        <div class="topbar">
+            <div class="search">
+                <h3>messaging</h3>
+                <div class="input">
+                    <fa-icon [icon]="faSearch"></fa-icon>
+                    <input type="text" placeholder="search messages">
+                </div>
+            </div>
+            <div class="icons">
+                <fa-icon [icon]="faellipsisH"></fa-icon>
+                <fa-icon [icon]="faEdit"></fa-icon>
+            </div>
+        </div>
+        <div class="message-area">
+            <div class="friends">
+                <div class="friend"
+                 *ngFor="let friend of friends; let i = index"
+                 [ngClass]="{'selected':selectedFriendIndex === i}"
+                 (click)="selectFriend(i)">
+                    <img [src]="friend.image" alt="">
+                    <div class="about">
+                        <span>
+                            <h4>{{friend.name}}</h4>
+                            <small>{{friend.time}}</small>
+                        </span>
+                        <p>you: <span>{{friend.lastMessage}}</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="messagebody">
+                <div class="profile">
+                    <img src="../assets/person1.png" alt="">
+                    <h4>elizabeth wairimu</h4>
+                    <p>network implementation </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

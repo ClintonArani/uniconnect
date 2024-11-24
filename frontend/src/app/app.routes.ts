@@ -8,6 +8,8 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { UserDashboardComponent } from './component/user-dashboard/user-dashboard.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { MynetworkComponent } from './component/mynetwork/mynetwork.component';
+import { MessagingComponent } from './component/messaging/messaging.component';
+import { ChatComponent } from './component/chat/chat.component';
 
 export const routes: Routes = [
     {path: 'home',component:LandingPageComponent},
@@ -23,7 +25,9 @@ export const routes: Routes = [
             {path: '',redirectTo: 'feed',pathMatch: 'full'},
             {path: 'mynetwork',component:MynetworkComponent},
             {path: 'profile',component: ProfileComponent},
+            {path: 'messaging',component:MessagingComponent}
         ]
     },
+    {path: 'chat',component:ChatComponent},
     {path: '**',component: NotfoundComponent},
 ];

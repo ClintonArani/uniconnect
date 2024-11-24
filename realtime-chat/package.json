@@ -1,0 +1,26 @@
+{
+  "name": "realtime-chat",
+  "version": "1.0.0",
+  "description": "This is a RealTime-chat of my Uniconnect website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev src/server.ts",
+    "build": "tsc"
+  },
+  "author": "Bill Clinton",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "http": "^0.0.1-security",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/socket.io": "^3.0.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}

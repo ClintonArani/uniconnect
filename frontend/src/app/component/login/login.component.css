@@ -1,165 +1,94 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
-    color: #fff;
-}
 .main{
+    background: #f3f2f0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #25252b;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+    gap: 1rem;
+    margin-top: -10px;
+    height: 99.13vh;
+}
+.main > img{
+    width: 11rem;
+    height: 4rem;
 }
 .container{
-    position: relative;
-    width: 750px;
-    height: 450px;
-    border: 2px solid #ff2770;
-    box-shadow: 0 0 25px #ff2770;
-    overflow: hidden;
-}
-.container .form-box{
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.container .login{
-    left: 0;
-    padding: 0 40px;
+.container > form{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 0 8px #ccc;
+    padding: 1.5rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
 }
-.container .Register{
-    display: none;
+h1{
+    margin: 0 auto;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, sans-serif;
 }
-.form-box h2{
-    font-size: 32px;
-    text-align: center;
+.para{
+    margin: 0 auto;
+    font-size: large;
     text-transform: capitalize;
 }
-.form-box .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin-top: 25px;
+.container > form > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.3rem;
 }
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
+.container > form > div > label{
+    text-transform: capitalize;
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: bold;
+}
+.container > form > div > input{
+    width: 30rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: .8rem;
+    font-family: Verdana, Geneva, sans-serif;
     outline: none;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 600;
-    border-bottom: 2px solid #fff;
-    padding-right: 23px;
-}
-.input-box label{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #fff;
-    transition: .5s;
-}
- .input-box input:focus ~ label{
-    top: -5px;
-    color: #ff2770;
-}
-.input-box fa-icon{
-    position: absolute;
-    right: 0;
-    top: 50%;
-    font-size: 18px;
-    transform: translateY(-50%);
-    transition: .5s;
-}
-.input-box input:focus ~ fa-icon{
-    top: -5px;
-    color: #ff2770;
 }
 button{
-    position: relative;
-    width: 100%;
-    height: 45px;
-    background: transparent;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    border: 2px solid #ff2770;
-    overflow: hidden;
-    z-index: 1;
-}
-button::before{
-    content: " ";
-    position: absolute;
-    height: 300%;
-    width: 100%;
-    background: linear-gradient(#25252b,#ff2770,#25252b,#ff2770);
-    top: -100%;
-    left: 0;
-    z-index: -1;
-    transition: .5s;
-}
-button:hover:before{
-    top: 0;
-}
-.regi-link{
-    font-size: 14px;
-    text-align: center;
-    margin: 20px 0 10px;
-}
-.regi-link span{
-    text-decoration: none;
-    color: #ff2770;
-    font-weight: 600;
-}
-.regi-link span:hover{
-    text-decoration: 2px underline;
-}
-.info-content{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
+    margin: 0 auto;
+    width: 20rem;
+    height: 2.3rem;
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    font-size: large;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #1174af;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    margin-top: 2rem;
+   gap: 1rem;
 }
-.info-content.login{
-    right: 0;
-    text-align: right;
-    padding: 0 40px 60px 150px;
-    margin-left: 24rem;
-}.info-content.Register{
-    right: 0;
-    text-align: right;
-    padding: 0 40px 60px 150px;
-    margin-left: 24rem;
-    display: none;
+span{
+    margin-left: 10rem;
+    display: flex;
+    align-items: center;justify-content: center;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    font-size: large;
 }
-.info-content.login h2{
-    text-transform: uppercase;
-    font-size: 36px;
-    line-height: 1.3;
-}
-.info-content.login p{
-    font-size: 16px;
-}
-.container .curved-shape{
-    position: absolute;
-    right: 0;
-    top: -5px;
-    height: 600px;
-    width: 850px;
-    background: linear-gradient(45deg, #25252b, #ff2770);
-    transform: rotate(10deg) skewY(40deg);
-    transform-origin: bottom right;
+span > p{
+    color: #0a66c2;
+    text-decoration: underline;
 }

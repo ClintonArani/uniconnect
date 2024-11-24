@@ -1,0 +1,36 @@
+<div class="chat-container">
+    <div class="messages-container">
+      <!-- Loop through messages -->
+      <div
+        *ngFor="let msg of messages"
+        [ngClass]="{ sender: msg.isSender, receiver: !msg.isSender }"
+        class="message"
+      >
+        <img
+          *ngIf="msg.isSender"
+          class="avatar"
+          src="assets/person1.png"
+          alt="Sender"
+        />
+        <span class="message-text">{{ msg.text }}</span>
+        <img
+          *ngIf="!msg.isSender"
+          class="avatar"
+          src="assets/person4.png"
+          alt="Receiver"
+        />
+      </div>
+    </div>
+  
+    <!-- Input Field and Send Button -->
+    <div class="input-container">
+      <input
+        type="text"
+        [(ngModel)]="message"
+        placeholder="Type a message..."
+        class="message-input"
+      />
+      <button (click)="sendMessage()" class="send-button">Send</button>
+    </div>
+  </div>
+  

@@ -1,1 +1,45 @@
-<p>register works!</p>
+<div class="main">
+    <img src="../assets/logo.png" alt="">
+    <div class="container">
+        <h1>Maximize the potential of your professional career.</h1>
+        <form [formGroup]="registerForm" >
+            <div class="name-field">
+                <label>first name</label>
+                <input type="text" placeholder="Enter your first name" formControlName="firstName">
+                <div class="validate-container" *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+                    <small class="validateError" *ngIf="registerForm.get('firstName')?.errors?.['required']">First Name is required</small>
+                    <small class="validateError" *ngIf="registerForm.get('firstName')?.errors?.['minlength']">First Name must be at least 2 characters long</small>
+                </div>
+            </div>
+            <div class="name-field">
+                <label>last name</label>
+                <input type="text" placeholder="Enter your last name" formControlName="lastName">
+                <div class="validate-container" *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+                    <small class="validateError" *ngIf="registerForm.get('lastName')?.errors?.['required']">Last Name is required</small>
+                    <small class="validateError" *ngIf="registerForm.get('lastName')?.errors?.['minlength']">Last Name must be at least 2 character long</small>
+                </div>
+            </div>
+            <div class="email-field">
+                <label>email</label>
+                <input type="text" placeholder="Enter your email" formControlName="email">
+                <div class="validate-conatiner" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+                    <small class="validateError" *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</small>
+                    <small class="validateError" *ngIf="registerForm.get('email')?.errors?.['email']">Enter a valid email</small>
+                </div>
+            </div>
+            <div class="password-field" >
+                <label>password</label>
+                <input type="password" placeholder="Enter your password" formControlName="password">
+                <div class="validate-container" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+                    <small class="validateError" *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</small>
+                    <small class="validateError" *ngIf="registerForm.get('password')?.errors?.['minlength']">Last Name must be at least 2 character long</small>
+                </div>
+            </div>
+            <button>
+                <fa-icon [icon]="faUserPlus"></fa-icon>
+                <p>sign up</p>
+            </button>
+            <span>already on Uniconnect? <p routerLink="/login">signIn </p></span>
+        </form>
+    </div>
+</div>
